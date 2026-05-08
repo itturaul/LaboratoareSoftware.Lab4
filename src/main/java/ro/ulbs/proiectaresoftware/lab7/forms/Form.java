@@ -1,15 +1,28 @@
 package ro.ulbs.proiectaresoftware.lab7.forms;
 
 public class Form {
+
+    private static int counter = 0;
     private String color;
 
+
+
+
     public Form() {
+        counter++;
         color = "white";
     }
 
     public Form(String color) {
+        counter++;
         this.color = color;
     }
+
+
+    public static int getCounter() {
+        return counter;
+    }
+
 
     public float getArea() {
         return 0;
@@ -29,16 +42,5 @@ public class Form {
             }
         }
         return false;
-    }
-}
-public class Form {
-    private static int counter = 0;
-
-    public Form() {
-        counter++;
-    }
-
-    public static int getCounter() {
-        return counter;
     }
 }
